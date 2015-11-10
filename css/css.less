@@ -1,0 +1,62 @@
+@bgcolor:#4f4f4f;
+@hdcolor:#e7e7e7;
+@dMargin:10px;
+@dHeight:10px;
+
+/* Margen por defecto. */
+.defaultMargin(){
+	margin:@dMargin;
+}
+
+/* Altura por defecto. */
+.defaultHeight(){
+	min-height:@dHeight;
+}
+
+/* Funcion para redondear bordes. */
+.borderRadius(@width){
+	-webkit-border-radius: @width;
+	-moz-border-radius: @width;
+	-o-border-radius: @width;
+	border-radius: @width;
+}
+
+/* Estipos para toda la pagina. */
+.body{
+	background-color:@bgcolor;
+}
+
+/* Estilos para elencabezado. */
+.header{
+	background-color:@hdcolor;
+	width:auto;
+	text-align:center;
+
+	.defaultMargin();
+	.defaultHeight();
+	.borderRadius(10px);
+}
+
+/* Estilos para la seccion principal. */
+.section{
+	background-color:@hdcolor;
+	width:auto;
+	min-height:60px;
+	text-align:center;
+
+	.defaultMargin();
+	.defaultHeight();
+	.borderRadius(10px);
+}
+
+/* Estilos para el pie de pagina. */
+.footer{
+	background-color:@hdcolor;
+	width:auto;
+	min-height:60px;
+	text-align:center;
+
+	.defaultMargin();
+	.defaultHeight();
+	.borderRadius(10px);
+}
