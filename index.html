@@ -13,30 +13,9 @@
 	</head>
 	<body class="container container-fluid body">
 
-		<header class="header">
-			<div class="jumbotron">
-				<h2>
-					Parlamento Juvenil
-					<small>
-						Administraci&oacute;n
-					</small>
-				</h2>
-			</div>
-		</header>
-
-		<section ng-view class="section">
-			<center>
-				<img src="imgs/cargando.gif">	
-			</center>
-		</section>
-
-		<footer class="footer">
-			<h3>
-				<small>
-					@ Programa Desarrollado en la Legislatura de Jujuy
-				</small>
-			</h3>
-		</footer>
+		<center ng-controller="loginCtrl" ng-show="loading">
+			<img src="imgs/cargando.gif"/>
+		</center>
 
 		<!-- Libreria JS: JQuery -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -59,6 +38,23 @@
 
 		<!-- Aplicacion JS: Controladores. -->
 		<script type="text/javascript" src="ctrl/controller.login.js"></script>
+
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h2>
+					Parlamento Juvenil
+					<small>
+						Administraci&oacute;n
+					</small>
+				</h2>
+			</div>
+			<div class="panel-body">
+				<div class="container container-fluid" ng-view></div>
+			</div>
+			<div class="panel-footer">
+				<h5>@ programa desarrollado en el centro de computos...</h5>
+			</div>
+		</div>
 
 	</body>
 </html>
